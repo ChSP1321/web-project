@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="indexstyle.css">
+        <link rel = "icon" href = "Img\mywebico.jpg">
+        <title>WwRB</title> 
+    </head>
+    <body onload="setInterval(changeColor,1000)">
+        <header class="myheader">
+            <div class="dropdown">
+              <button class="dropbtn">&#127968;</button>
+              <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="AboutUs.html">About us</a>
+                <a href="#">Create Program</a>
+                <a href="#">Buy</a>
+              </div>
+            </div>
+            <div class="navbar">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs.html">About us</a></li>
+                <li><a href="#">Create Program</a></li>
+                <li><a href="#">Buy</a></li>
+              </ul>
+            </div>
+          </header>
+          <div class="title">
+            <h1 class="texttitle">Workout with Resistance Bands</h1>
+            <div id="img1"><img src="Img\webico.png" class="imgtitle" alt="Logo" style="width:25%; height: 18%; margin-top: 0px;"></div>
+            <div id="img2"><img id="imgtitle1"></div>  
+          </div>
+         
+          <h3 id="info">Click on muscles for exercises!</h3>
+          <div>
+            <div class="musclebody"> <img class="body1" usemap="#musmap1" src="Img\1.png" alt="body1">
+              <map name="musmap1">
+                <area shape="poly" title="Shoulder" coords="169,116,190,112,205,131,205,159,184,184,156,184,148,169,152,140" href="https://www.youtube.com/watch?v=NtaPROZOcmM">
+                <area shape="poly" title="Chest" coords="133,131,144,137,146,155,142,171,133,188,120,199,112,184,116,155" href="https://www.youtube.com/watch?v=HY9i5BSC2GQ">
+                <area shape="rect" title="Arm" coords="146,181,199,294" href="https://www.youtube.com/watch?v=G-rS3GFslts">
+                <area shape="rect" title="ABS" coords="104,197,145,313" href="https://www.youtube.com/watch?v=MfjpqCII2Z0">  
+                <area shape="rect" title="Legs" coords="111,355,197,501" href="https://www.youtube.com/watch?v=VKR4OVyCeK0">
+                <area shape="rect" title="Calves" coords="149,501,217,661" href="https://www.youtube.com/watch?v=esdQSIxteQg">
+              </map>
+            </div>   
+            <div class="musclebody"><img class="body2" usemap="#musmap2" src="Img\2.png" alt="body2">
+              <map name="musmap2">
+                <area shape="poly" title="Shoulder" coords="67,167,87,164,96,155,105,128,99,115,70,127" href="https://www.youtube.com/watch?v=NtaPROZOcmM">
+                <area shape="poly" title="Shoulder" coords="207,121,218,139,226,155,245,166,261,148,250,127,233,110,216,107" href="https://www.youtube.com/watch?v=NtaPROZOcmM">
+                <area shape="rect" title="Chest" coords="217,193,103,116" href="https://www.youtube.com/watch?v=HY9i5BSC2GQ">
+                <area shape="rect" title="Biceps" coords="100,247,55,159" href="#biceps">
+                <area shape="rect" title="Biceps" coords="264,251,219,163" href="#biceps">
+                <area shape="rect" title="ABS" coords="220,322,103,190" href="https://www.youtube.com/watch?v=MfjpqCII2Z0">  
+                <area shape="rect" title="Legs" coords="240,509,93,333" href="https://www.youtube.com/watch?v=VKR4OVyCeK0">
+                <area shape="rect" title="Calves" coords="232,655,99,512" href="https://www.youtube.com/watch?v=esdQSIxteQg">
+              </map>
+            </div>
+            <div class="musclebody"><img class="body3" usemap="#musmap3" src="Img\3.png" alt="body3">
+              <map name="musmap3">
+                <area shape="rect" title="Shoulder" coords="112,169,65,120" href="https://www.youtube.com/watch?v=NtaPROZOcmM">
+                <area shape="rect" title="Shoulder" coords="266,168,219,119" href="https://www.youtube.com/watch?v=NtaPROZOcmM">
+                <area shape="rect" title="Beck" coords="226,309,108,155" href="#beck">
+                <area shape="rect" title="Triceps" coords="104,254,60,172" href="#triceps">
+                <area shape="rect" title="Triceps" coords="266,252,222,170" href="#triceps">
+                <area shape="rect" title="Legs" coords="242,510,106,342" href="https://www.youtube.com/watch?v=VKR4OVyCeK0">
+                <area shape="rect" title="Calves" coords="236,677,100,509" href="https://www.youtube.com/watch?v=esdQSIxteQg">
+              </map>
+            </div>
+          </div>
+       <footer>
+          <a href="rate.html"><button id="rate">RATE</button></a>
+       </footer>
+       <script>				
+        function changeColor(){
+          var x=document.getElementById("info");	
+            if (x.style.color=="white")x.style.color="crimson";
+            else if(x.style.color=="crimson")x.style.color="white";
+            else x.style.color="crimson";		}	
+
+
+    var myImage = ["Img/logobands.png", "Img/logobands1.png", "Img/logobands2.png"]
+
+    var index = 0;
+    setInterval(function () {
+        if (index === myImage.length) {
+            index = 0;
+        }
+        document.getElementById("imgtitle1").src = myImage[index];
+        index++;
+    }, 1000);		
+          
+</script>
+
+    </body>
+ </html>
